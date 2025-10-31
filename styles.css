@@ -1,0 +1,38 @@
+* body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #46237A;
+    --secondary: #256EFF;
+    --accent: #3DDC97;
+    --white: #FFFFFF;
+    --light-gray: #EEEEEE;
+    --black: #000000;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.navbar-links, a {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    padding: 0 32px;
+    font-family: "Space Mono", monospace;
+}
+
+.hero-container {
+    display: flex;
+}
+
+#hero-img {
+    background-color: var(--light-gray);
+    width: 100%;
+}
