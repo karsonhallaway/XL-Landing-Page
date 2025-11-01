@@ -98,3 +98,7 @@ body {
     border: 2px solid var(--dark-gray);
 }
 
+footer {
+    padding: 96px 0 48px 0;
+    text-align: center;
+}
