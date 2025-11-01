@@ -42,7 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 0;
+    padding: 80px 0 40px 0;
     gap: 40px;
     align-self: stretch;
 
@@ -75,3 +75,26 @@ body {
     border-radius: 32px;
     border: 2px solid var(--black);
 }
+
+.content-container h2 {
+    text-align: center;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 48px;
+}
+
+.grid-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    height: 416px;
+    background-color: var(--light-gray);
+    border-radius: 24px;
+    border: 2px solid var(--dark-gray);
+}
+
