@@ -128,7 +128,12 @@ body {
 @media (max-width: 600px) {
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-template-columns: minmax(auto, 300px);
+    }
+
+    .grid-container div {
+        max-height: 300px;
     }
 }
 
