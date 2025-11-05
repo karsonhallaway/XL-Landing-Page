@@ -68,14 +68,34 @@ body {
     line-height: 100px;
     margin: 0;
 }
-/* =============================== 
-    Mobile h1 styling
-================================= */
 
+
+/* =============================== 
+Mobile h1 styling
+================================= */
 @media (max-width: 600px) { 
     .hero-container h1 {
         font-size: 48px;
         line-height: 48px;
+    }
+}
+
+/* =============================== 
+    Tablet h1 styling
+================================= */
+@media (min-width: 601px) and (max-width: 900px) {
+    .hero-container h1 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+}
+
+/* =============================== 
+    Extra Large Desktop h1 styling
+================================= */
+@media (min-width: 1920px) {
+    .hero-container h1 {
+        font-size: 4rem;
     }
 }
 
@@ -95,15 +115,20 @@ body {
 ================================= */
 @media (max-width: 600px) {
     #hero-img {
-        height: 200px;
+        height: 300px;
     }
 }
 
+/* =============================== 
+    Tablet Styling for hero-img 
+================================= */
 @media (min-width: 601px) and (max-width: 900px) {
     #hero-img {
         height: 350px;
     }
 }
+
+
 
 .btn {
     padding: 12px 24px;
@@ -128,15 +153,36 @@ body {
 @media (max-width: 600px) {
     .grid-container {
         display: grid;
-        justify-content: center;
-        grid-template-columns: minmax(auto, 300px);
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     }
 
     .grid-container div {
-        max-height: 300px;
+        min-height: 300px;
     }
 }
 
+/* =============================== 
+   Tablet Grid Container Styling
+================================= */
+@media (min-width: 601px) and (max-width: 900px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+        /* Columns will adjust to fit, minimum 200px, maximum 1fr */
+        gap: 1rem;
+    }
+}
+
+
+/* =============================== 
+    Extra Large Desktop Grid Container styling
+================================= */
+@media (min-width: 1920) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
 .grid-container div {
     display: flex;
     justify-content: center;
