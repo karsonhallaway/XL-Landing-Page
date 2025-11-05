@@ -1,9 +1,11 @@
+/* General Reset to remove default margins and padding */
 * body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Root Variables */
 :root {
     --primary: #46237A;
     --secondary: #256EFF;
@@ -14,6 +16,7 @@
     --black: #000000;
 }
 
+/* Global Styles */
 body {
     display: flex;
     flex-direction: column;
@@ -23,6 +26,7 @@ body {
     padding: 0 20px;
 }
 
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -34,7 +38,7 @@ body {
     justify-content: centers;
     list-style: none;
     text-decoration: none;
-    padding: 0 32px;
+    padding: 0 24px;
     font-family: "Space Mono", monospace;
 }
 
@@ -43,6 +47,7 @@ body {
     flex-direction: column;
     flex: 1;
 }
+
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -60,8 +65,18 @@ body {
     font-size: 100px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100px; /* 100% */
+    line-height: 100px;
     margin: 0;
+}
+/* =============================== 
+    Mobile h1 styling
+================================= */
+
+@media (max-width: 600px) { 
+    .hero-container h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
 }
 
 #hero-img {
@@ -73,6 +88,21 @@ body {
     height: 500px;
     border-radius: 24px;
     border: 2px solid var(--dark-gray);
+}
+
+/* =============================== 
+    Mobile Styling for hero-img 
+================================= */
+@media (max-width: 600px) {
+    #hero-img {
+        height: 200px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    #hero-img {
+        height: 350px;
+    }
 }
 
 .btn {
@@ -92,6 +122,16 @@ body {
     gap: 48px;
 }
 
+/* =============================== 
+   Mobile Grid Container Styling
+================================= */
+@media (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
 .grid-container div {
     display: flex;
     justify-content: center;
@@ -103,6 +143,7 @@ body {
     border: 2px solid var(--dark-gray);
 }
 
+/* Footer Styles */
 footer {
     padding: 96px 0 48px 0;
     text-align: center;
