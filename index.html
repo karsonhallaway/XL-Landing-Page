@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XL Laanding Page</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav>
         <div class="logo"><a href="#"><b>TechNova</b></a></div>
-        <ul class="navbar-links">
+        <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+        <ul id="menu-links" class="menu-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
@@ -43,5 +45,11 @@
     <footer>
         <p>&copy2025 TechNova</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu-links");
+            menu.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
