@@ -1,5 +1,5 @@
 /* General Reset to remove default margins and padding */
-* body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,25 +31,35 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 32px 0;
 }
 
-.menu-links, a {
+.logo a {
+    padding: 0 32px 0 0;
+    text-decoration: none;
+    font-family: "Space Mono", sans-serif;
+}
+
+.menu-links {
     display: flex;
-    justify-content: centers;
-    list-style: none;
+    justify-content: center;
+}
+
+.menu-links a {
     text-decoration: none;
     color: var(--black);
-    font-family: "Space Mono", monospace;
+    font-family: "Space Mono", sans-serif;
     text-align: center;
+}
+
+.menu-links li {
+    list-style: none;
 }
 
 a:hover {
     color: var(--secondary);
 }
 
-.logo a {
-    padding: 0 32px 0 0;
-}
 
 a {
     padding: 0 0 0 32px;
@@ -273,7 +283,7 @@ Mobile h1 styling
 /* =============================== 
     Extra Large Desktop Grid Container styling
 ================================= */
-@media (min-width: 1920) {
+@media (min-width: 1920px) {
     .grid-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
